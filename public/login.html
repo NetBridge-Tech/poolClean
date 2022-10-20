@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main-login">
+        <!-- DARK THEME >>>
+            <div class="theme">
+            <input type="checkbox" class="checkbox" name="checkbox" id="chk">
+            <label for="checkbox" class="label">
+                <img src="assets/brightness-high.svg" alt="Sol">
+                <img src="assets/moon.svg" alt="Lua">
+                <div class="ball"></div>
+            </label>
+        </div> -->
+        <div class="left-login">
+            <h1 class="title">Pool Clean <br> O melhor serviço de limpeza de piscinas é aqui!</h1>
+            <!-- <h2>O melhor serviço de limpeza de piscinas é aqui!</h2> -->
+            <img src="assets/floating-pool.svg" alt="Flutuando na piscina" class="login-image">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <form action="/dados/login" method="post">
+                    <div class="textfield">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" class="input" placeholder="poolclean@email.com">
+                    </div>
+
+                    <div class="textfield">
+                        <label for="password">Senha:</label>
+                        <input type="password" name="password" id="password" class="input" placeholder="Senha">
+                    </div>
+
+                        <button type="submit" name="btn" id="btn" class="btn">Login</button>
+                        <p class="subtitle">Novo por aqui?<br></p>
+                        <p class="subtitle"><strong><a href="#">Cadastre-se agora</a></strong></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
