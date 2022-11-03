@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .main-login{
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     background-color: var(--main-bg-light);
     display: flex;

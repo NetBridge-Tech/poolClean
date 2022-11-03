@@ -5,11 +5,83 @@ body{
     color: var(--primary-color);
 }
 
+.container{
+    width: 99vw;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    background-color: var(--nav-color);
+    width: 80vw;
+    height: 200vh;
+    box-shadow: 1px 3px 20px 3px #93c2ec;
+    border-radius: 0px 0px 15px 15px;
+}
+
 .content > h1{
     font-weight: bold;
+    text-shadow: 1px 1px 1px #93c2ec;
+}
+
+.content > h2{
+    padding-top: 2em;
+    font-weight: 500;
+    font-size: 1.8em;
 }
 
 .content > p{
     font-weight: 500;
     font-size: 1.2em;
+    /* color: var(--white);
+    text-shadow: 1px 1px 1px black; */
+}
+
+.content{
+    padding: 1em;
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3em;
+}
+
+.text-products{
+    align-items: center;
+    justify-content: center;
+    padding: 4em;
+}
+
+.products > img{
+    width: 250px;
+    height: 250px;
+}
+
+.products > h3{
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.container-button{
+    padding: 5em;
+}
+
+.container-button h2{
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.container-button h3{
+    font-weight: 500;
+    font-size: 1em
+}
+
+@media screen and (max-width: 768px){
+    .products{
+        display: block;
+        /* flex-direction:column; */
+    }
 }
