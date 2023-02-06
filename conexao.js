@@ -5,7 +5,7 @@ const client = new pg.Client({
     host:'localhost',
     database:'poolClean',
     password:'postgres',
-    port:5432
+    port:8080
 });
 
 module.exports = client;
