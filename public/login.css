@@ -109,6 +109,7 @@ form{
 }
 
 .textfield{
+    /* color: var(--color-dark5); */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -135,7 +136,7 @@ form{
     margin-bottom: 10px;
 }
 
-.textfield > input::placeholder{
+.textfield > input::placeholder, #email, #password{
     color: #14131580;
 }
 
