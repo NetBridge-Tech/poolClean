@@ -3,9 +3,9 @@ const pg = require('pg');
 const client = new pg.Client({
     user: 'postgres',
     host:'localhost',
-    database:'poolClean',
+    database:'poolclean',
     password:'postgres',
-    port:8080
+    port:5432
 });
 
 module.exports = client;

@@ -7,7 +7,7 @@ body{
 
 .container{
     width: 99vw;
-    height: 200vh;
+    height: 250vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@ body{
 .section{
     background-color: var(--nav-color);
     width: 80vw;
-    height: 200vh;
+    height: 250vh;
     box-shadow: 1px 3px 20px 3px #93c2ec;
     border-radius: 0px 0px 15px 15px;
 }

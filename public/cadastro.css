@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+.main-login{
+    width: 99vw;
+    height: 125vh;
+    background-color: var(--main-bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s linear;
+}
+
+/* DARK THEME >>
+.light{
+    background-color: #efefef;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+
+.ball{
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+} */
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 2vw;
+    padding: 15px 0px 0px 10px;
+    color: var(--primary-color);
+}
+
+.login-image{
+    width: 35vw;
+    padding: 0px;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: var(--white-gray);
+    border-radius: 18px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337);
+    
+}
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.card-login > h1{
+    color: var(--primary-color);
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield{
+    /* color: var(--color-dark5); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--white);
+    color: var(--white-gray);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: var(--color-dark5);
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder, #email, #password, #nome, #cpf, #password2{
+    color: #14131580;
+}
+
+.btn{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--white); 
+    background-color: var(--secundary-color);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #2307f584;
+
+}
+
+.btn:hover{
+    background-color: #2307f5ca;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.subtitle{
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px){
+    .navigation-header{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--nav-color);
+        height: 100%;
+        width: 35vw;
+        padding: 1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    }
+
+    @keyframes showSidebar {
+        from {margin-left: -100vw;}
+        top{margin-left: -10vw;}
+    }
+
+    .btn-icon-header{
+        display: block;
+        cursor: pointer;
+        color: var(--color-dark5);
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+        height: 150vh;
+    }
+    .left-login > h1{
+        display: none;
+    }
+
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+    .login-image{
+        width: 50vw;
+    }
+    .card-login{
+        width: 90%;
+    }
+}
