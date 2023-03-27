@@ -2,6 +2,7 @@ var header = document.getElementById('header');
 var navigationHeader = document.getElementById('navigation-header');
 var content = document.getElementById('content');
 var showSidebar = false;
+var txtCadastro = document.getElementById('cad-success')
 
 function toggleSidebar() {
     showSidebar = !showSidebar;
@@ -27,3 +28,7 @@ window.addEventListener('resize', function(event){
         toggleSidebar();
     }
 });
+
+export function showClass(){
+    txtCadastro.classList.remove('hidden')
+}
