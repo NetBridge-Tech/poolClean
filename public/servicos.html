@@ -7,6 +7,7 @@
     <title>Serviços</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/servicos.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <!--Script Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -35,8 +36,24 @@
     </header>
 
     <!--main-->
-    <main>
-        <h1>Serviços</h1>
+    <main class="main-servicos content">
+        <h1 class="title">Realize seu agendamento agora mesmo</h1>
+        <div class="card-agendamento">
+            <h4 class="subtitle">Selecione o tipo de serviço e o funcionário para realizá-lo</h4>
+            <select name="tipoServico" id="tipoServico">
+                <option value="limpezaCompleta" selected>Limpeza Completa</option>
+                <option value="aspiracao">Aspiração</option>
+            </select>
+
+            <select name="funcionario" id="funcionario">
+                <option value="Iago Muller">Iago Muller</option>
+                <option value="Lucas Dmytriw">Lucas Dmytriw</option>
+            </select>
+
+            <h4 class="subtitle">Escolha uma data disponível</h4>
+            <input type="date" name="data" id="data">
+        </div>
+        
     </main>
 
 
