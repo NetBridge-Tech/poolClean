@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.main-servicos{
+    width: 99vw;
+    height: 100vh;
+    background-color: var(--main-bg-light);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s linear;
+}
+
+.title{
+    font-size: 2vw;
+    padding: 15px 0px 0px 10px;
+    color: var(--primary-color);
+}
+
+.card-agendamento{
+    width: 60%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: var(--white-gray);
+    border-radius: 18px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337);
+    margin: auto;
+    
+}
