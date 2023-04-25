@@ -18,48 +18,14 @@
         <a href="/sobre">Sobre nós</a>
         <a href="/login" class="active-button">Login</a>
     </div>
-    <!-- dark THEME >>>
-        <div class="theme">
-        <input type="checkbox" class="checkbox" name="checkbox" id="chk">
-        <label for="checkbox" class="label">
-            <img src="assets/brightness-high.svg" alt="Sol">
-            <img src="assets/moon.svg" alt="Lua">
-            <div class="ball"></div>
-        </label>
-    </div> -->
 </header>
 <div class="main-login content">
-    <div class="left-login">
-        <h1 class="title">Pool Clean <br> O melhor serviço de limpeza de piscinas é aqui!</h1>
-        <!-- <h2>O melhor serviço de limpeza de piscinas é aqui!</h2> -->
-        <img src="assets/floating-pool.svg" alt="Flutuando na piscina" class="login-image">
-    </div>
     <div class="right-login">
         <div class="card-login">
-            <h1>CADASTRO</h1>
-            <form action="add-pessoa" method="post">
-                <div class="textfield">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" name="nome" id="nome" class="input" placeholder="Nome Completo">
-                </div>
+            <h1>ERRO</h1>
+            <p>Cadastro não realizado, verifique sua senha!</p>
+            <button type="submit" name="btn" id="btn" class="btn"><a onclick="window.location.href=('/cadastro')" id="link-botão">Voltar para o cadastro</a></button>
 
-                <div class="textfield">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="input" placeholder="poolclean@email.com">
-                </div>
-
-                <div class="textfield">
-                    <label for="password">Senha:</label>
-                    <input type="password" name="password" id="password" class="input" placeholder="Senha">
-                </div>
-
-                <div class="textfield">
-                    <label for="password">Confirmar Senha:</label>
-                    <input type="password" name="password2" id="password2" class="input" placeholder="Confirmar Senha">
-                </div>
-
-                <button type="submit" name="btn" id="btn" class="btn">Cadastre-se</button>
-            </form>
         </div>
     </div>
 </div>

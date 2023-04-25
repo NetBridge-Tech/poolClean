@@ -169,6 +169,10 @@ a{
 .subtitle{
     color: var(--primary-color);
 }
+.hide{
+    visibility: hidden;
+    display: none;
+}
 
 @media screen and (max-width: 768px){
     .navigation-header{

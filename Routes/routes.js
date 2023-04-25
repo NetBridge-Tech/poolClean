@@ -42,18 +42,25 @@ routes.get('/cadastro', (req, res) => {
 
 
 routes.post('/add-pessoa', (req, res) => {
-    Pessoa.create({
-        nome: req.body.nome,
-        email: req.body.email,
-        senha: req.body.password
-    }).then(() => {
-        res.render('../views/add-pessoa', {
-            title: 'Cadastro',
+    if(req.body.password == req.body.password2){
+        Pessoa.create({
+            nome: req.body.nome,
+            email: req.body.email,
+            senha: req.body.password
+        }).then(() => {
+            res.render('../views/add-pessoa', {
+                title: 'Cadastro',
+                style: 'add-pessoa.css'
+            })
+        }).catch((err) => {
+            res.send("Erro: Não foi possível realizar o cadastro!" + err)
+        })
+    } else{
+        res.render('../views/erro-cadastro', {
+            title: 'Erro',
             style: 'add-pessoa.css'
         })
-    }).catch((err) => {
-        res.send("Erro: Não foi possível realizar o cadastro!" + err)
-    })
+    }
 })
 
 routes.get('/perfil', (req, res) => {
@@ -68,16 +75,5 @@ routes.get('/perfil', (req, res) => {
         })
     })
 })
-
-
-// routes.get('/perfil', async (req, res) => {
-//     const lastUpdate = await Pessoa.findOne({
-//         order: [['updatedAt', 'DESC']]
-//     })
-//     res.render('perfil', {
-//         title: 'perfil',
-//         style: 'add-pessoa.css'
-//     })    
-// })
 
 module.exports = routes;
