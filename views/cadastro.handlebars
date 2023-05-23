@@ -40,30 +40,25 @@
             <form action="add-pessoa" method="post">
                 <div class="textfield">
                     <label for="nome">Nome Completo:</label>
-                    <span>Máx. 50 caracteres</span>
-                    <input type="text" name="nome" id="nome" class="input" placeholder="Nome Completo" required>
+                    <input type="text" name="nome" id="nome" class="input" placeholder="Nome Completo" pattern="[a-zA-ZáãâéêíîóõôúÁÃÂÉÊÍÎÓÕÔÚ\s]+$" title="Máx. 50 caracteres" required>
                      <span class="require">*Campo obrigatório</span>
                 </div>
 
                 <div class="textfield">
                     <label for="email">Email:</label>
-                    <span>Máx. 50 caracteres</span>
-                    <input type="email" name="email" id="email" class="input" placeholder="poolclean@email.com" required>
+                    <input type="email" name="email" id="email" class="input" placeholder="poolclean@email.com" title="Máx. 50 caracteres" required>
                     <span class="require">*Campo obrigatório</span>
                 </div>
 
                 <div class="textfield">
                     <label for="password">Senha:</label>
-                    <span>8 à 50 caracteres</span>
-                    <span>Contendo néumeros, letras maiúsculas, minúsculas</span>
-                    <span>e caracteres especiais (!@#$%&*)</span>
-                    <input type="password" name="password" id="password" class="input" placeholder="Senha" pattern="^(?=.[A-Z])(?=.[!#@$%&])(?=.[0-9])(?=.[a-z]).{8,50}$" required>
+                    <input type="password" name="password" id="password" class="input" placeholder="Senha" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%¨&*-]).{8,}$" title="8 à 50 caracteres com números, maiúsculas, minúsculas e especiais (!@#$%&*)" required>
                     <span class="require">*Campo obrigatório</span>
                 </div>
 
                 <div class="textfield">
                     <label for="password">Confirmar Senha:</label>
-                    <input type="password" name="password2" id="password2" class="input" placeholder="Confirmar Senha" pattern="^(?=.[A-Z])(?=.[!#@$%&])(?=.[0-9])(?=.[a-z]).{8,50}$" required>
+                    <input type="password" name="password2" id="password2" class="input" placeholder="Confirmar Senha" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%¨&*-]).{8,}$" required>
                     <span class="require">*Campo obrigatório</span>
                 </div>
 

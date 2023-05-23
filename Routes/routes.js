@@ -89,7 +89,7 @@ routes.post('/login', async (req, res) => {
 
 routes.get('/perfil', (req, res) => {
     Pessoa.findAll({
-        order: [['id', 'ASC']],
+        order: [['id', 'DESC']],
         limit: 1
     }).then((pessoa) => {
         res.render('perfil', {
