@@ -1,31 +1,55 @@
 @charset "UTF-8";
 
-.main-servicos{
+.container{
     width: 99vw;
-    height: 100vh;
-    background-color: var(--main-bg-light);
-    /* display: flex; */
+    height: 160vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 0.2s linear;
+}
+
+.section{
+    /* margin-top: 1em; */
+    width: 60%;
+    height: 150vh;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337);
+    background: url("../assets/piscina4-800.jpg") no-repeat var(--white-gray);
 }
 
 .title{
-    font-size: 2vw;
-    padding: 15px 0px 0px 10px;
-    color: var(--primary-color);
+    text-transform: uppercase;
+    font-family: var(--fonte-tituloSans);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.527);
+    margin-top: 1em;
+    font-size: 3em;
 }
 
-.card-agendamento{
-    width: 60%;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 35px;
-    background-color: var(--white-gray);
-    border-radius: 18px;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.337);
-    margin: auto;
+.servicoPrincipal{
+    background-color: var(--primary-color);
+    width: 90%;
+    height: 15vh;
+    margin: 12em auto 0 auto;
+    border-radius: 6px;
+    color: white;
+
+
+}
+
+.servico{
+    background-color: var(--primary-color);
+    width: 90%;
+    height: 15vh;
+    margin: 2em auto 0 auto;
+    border-radius: 6px;
     
+}
+
+.servico, 
+.servicoPrincipal > p{
+    color: white;
+    font-size: 1.3em;
+    font-family: var(--fonte-padrao);
+    padding-top: 1em;
 }

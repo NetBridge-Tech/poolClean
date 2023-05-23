@@ -2,6 +2,7 @@ const express = require('express');
 const routes = express.Router();
 const path = require('path');
 const Pessoa = require('../Pessoa')
+const bcrypt = require('bcryptjs');
 
 
 routes.get('/', (req, res) => {
@@ -9,13 +10,6 @@ routes.get('/', (req, res) => {
         title: 'Pool Clean',
         style: 'home.css',
         // function: 'toggleSidebar()'
-    })
-});
-
-routes.get('/login', (req, res) => {
-    res.render('../views/login', {
-        title: 'Login',
-        style: 'login.css'
     })
 });
 
@@ -41,12 +35,13 @@ routes.get('/cadastro', (req, res) => {
 });
 
 
-routes.post('/add-pessoa', (req, res) => {
+routes.post('/add-pessoa', async (req, res) => {
     if(req.body.password == req.body.password2){
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
         Pessoa.create({
             nome: req.body.nome,
             email: req.body.email,
-            senha: req.body.password
+            senha: hashedPassword
         }).then(() => {
             res.render('../views/add-pessoa', {
                 title: 'Cadastro',
@@ -63,9 +58,38 @@ routes.post('/add-pessoa', (req, res) => {
     }
 })
 
+routes.get('/login', (req, res) => {
+    res.render('../views/login', {
+        title: 'Login',
+        style: 'login.css'
+    })
+});
+
+routes.post('/login', async (req, res) => {
+    const { nome, password } = req.body;
+    try {
+      const result = await db.query(
+        "SELECT * FROM pessoas WHERE nome = $1",
+        [nome]
+      );
+      if (result.rows.length === 0) {
+        return res.status(401).send("Usuário não encontrado");
+      }
+      const user = result.rows[0];
+      if (user.password !== password) {
+        return res.status(401).send("Senha incorreta");
+      }
+      req.session.user = user;
+      res.redirect("/perfil");
+    } catch (err) {
+      console.log(err);
+      res.status(500).send("Ocorreu um erro");
+    }
+  });
+
 routes.get('/perfil', (req, res) => {
     Pessoa.findAll({
-        order: [['id', 'DESC']],
+        order: [['id', 'ASC']],
         limit: 1
     }).then((pessoa) => {
         res.render('perfil', {

@@ -2,7 +2,7 @@
 
 .main-login{
     width: 99vw;
-    height: 125vh;
+    height: 140vh;
     background-color: var(--main-bg-light);
     display: flex;
     justify-content: center;
@@ -134,6 +134,18 @@ form{
 .textfield > label{
     color: var(--color-dark5);
     margin-bottom: 10px;
+}
+
+span{
+    color: #909090;
+    font-size: 8pt;
+    margin-left: .8em;
+}
+
+span.require{
+    color: rgb(192, 75, 75);
+    margin-left: 2em;
+    margin-top: .5em;
 }
 
 .textfield > input::placeholder, #email, #password, #nome, #cpf, #password2{
