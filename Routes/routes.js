@@ -94,7 +94,7 @@ routes.get('/perfil', (req, res) => {
     }).then((pessoa) => {
         res.render('perfil', {
             pessoa: pessoa,
-            title: 'perfil',
+            title: 'Perfil',
             style: 'perfil.css'
         })
     })
