@@ -20,7 +20,8 @@
     "moment": "^2.29.4",
     "nodemon": "^2.0.22",
     "pg": "^8.10.0",
-    "sequelize": "^6.31.0"
+    "sequelize": "^6.31.0",
+    "session": "^0.1.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0"

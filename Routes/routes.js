@@ -65,6 +65,7 @@ routes.get('/login', (req, res) => {
     })
 });
 
+
 routes.post('/login', async (req, res) => {
     const { nome, password } = req.body;
     try {
@@ -96,6 +97,19 @@ routes.get('/perfil', (req, res) => {
             pessoa: pessoa,
             title: 'Perfil',
             style: 'perfil.css'
+        })
+    })
+})
+
+routes.get('/editar', (req,res) => {
+    Pessoa.findAll({
+        order: [['id', 'DESC']],
+        limit: 1
+    }).then((pessoa) => {
+        res.render('editar', {
+            pessoa: pessoa,
+            title: 'Perfil',
+            style: 'editar.css'
         })
     })
 })

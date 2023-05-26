@@ -16,45 +16,60 @@
         <a href="/">Início</a>
         <a href="/servicos">Serviços</a>
         <a href="/sobre">Sobre nós</a>
-        <a href="/login" class="active-button">Login</a>
+        <a href="/perfil" class="active-button">Perfil</a>
     </div>
 </header>
-<div class="main-login content">
-    <div class="left-login">
-        <h1 class="title">Pool Clean <br> O melhor serviço de limpeza de piscinas é aqui!</h1>
-        <img src="assets/floating-pool.svg" alt="Flutuando na piscina" class="login-image">
-    </div>
-    <div class="right-login">
-        <div class="card-login">
-            <h1>CADASTRO</h1>
-            <form action="add-pessoa" method="post">
-                <div class="textfield">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" name="nome" id="nome" class="input" placeholder="Nome Completo" pattern="[a-zA-ZáãâéêíîóõôúÁÃÂÉÊÍÎÓÕÔÚ\s]+$" title="Máx. 50 caracteres" required>
-                     <span class="require">*Campo obrigatório</span>
-                </div>
 
-                <div class="textfield">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="input" placeholder="poolclean@email.com" title="Máx. 50 caracteres" required>
-                    <span class="require">*Campo obrigatório</span>
-                </div>
-
-                <div class="textfield">
-                    <label for="password">Senha:</label>
-                    <input type="password" name="password" id="password" class="input" placeholder="Senha" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%¨&*-]).{8,}$" title="8 à 50 caracteres com números, maiúsculas, minúsculas e especiais (!@#$%&*)" required>
-                    <span class="require">*Campo obrigatório</span>
-                </div>
-
-                <div class="textfield">
-                    <label for="password">Confirmar Senha:</label>
-                    <input type="password" name="password2" id="password2" class="input" placeholder="Confirmar Senha" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%¨&*-]).{8,}$" required>
-                    <span class="require">*Campo obrigatório</span>
-                </div>
-
-                <button type="submit" name="btn" id="btn" class="btn">Cadastre-se</button>
-            </form>
+<div class="main-perfil content">
+    <div class="card-buttons">
+        <div class="people_profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
         </div>
+        <div class="div_conta" onclick="window.location.href=('/perfil')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
+            </svg>
+            <p class="text_buttons">Visão geral da conta</p>
+        </div>
+        <div class="div_editar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+            </svg>
+          <p class="text_buttons">Editar perfil</p>
+        </div>
+        <button class="Btn">
+  
+            <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+  
+            <div class="text">Sair</div>
+        </button>
+    </div>
+    <div class="card-perfil">
+        <h1>Visão Geral da conta</h1>
+        <h2>Perfil</h2>
+        <div class="dados-perfil">
+            {{#each pessoa}}
+                <span class="title">Nome:</span>
+                <span class="dado">{{nome}}</span>
+                <hr>
+                <span class="title">Email:</span>
+                <span class="dado">{{email}}</span>
+                <hr>
+                <span class="title">Senha:</span>
+                <span class="dado">**********</span>
+            {{/each}}
+            <br>
+            <div class="buttons">
+                <button class="btn_cancelar">
+                <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+                </button>
+                <button class="btn_perfil">Salvar perfil</button>
+            </div>
+            
+    </div>
     </div>
 </div>
 <footer>
