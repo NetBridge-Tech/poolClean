@@ -148,7 +148,7 @@ span.require{
     margin-top: .5em;
 }
 
-.textfield > input::placeholder, #email, #password, #nome, #cpf, #password2{
+.textfield > input::placeholder, #email, #senha, #nome, #cpf, #senha2{
     color: #14131580;
 }
 

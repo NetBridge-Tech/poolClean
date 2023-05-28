@@ -16,44 +16,16 @@
         <a href="/">Início</a>
         <a href="/servicos">Serviços</a>
         <a href="/sobre">Sobre nós</a>
-        <a href="/login" class="active-button">Login</a>
+        <a href="/perfil" class="active-button">Perfil</a>
     </div>
 </header>
 <div class="main-login content">
-    <div class="left-login">
-        <h1 class="title">Pool Clean <br> O melhor serviço de limpeza de piscinas é aqui!</h1>
-        <img src="assets/floating-pool.svg" alt="Flutuando na piscina" class="login-image">
-    </div>
     <div class="right-login">
         <div class="card-login">
-            <h1>CADASTRO</h1>
-            <form action="add-pessoa" method="post">
-                <div class="textfield">
-                    <label for="nome">Nome Completo:</label>
-                    <input type="text" name="nome" id="nome" class="input" placeholder="Nome Completo" pattern="[a-zA-ZáãâéêíîóõôúÁÃÂÉÊÍÎÓÕÔÚ\s]+$" title="Máx. 50 caracteres" required>
-                     <span class="require">*Campo obrigatório</span>
-                </div>
+            <h1>LOGIN REALIZADO COM SUCESSO</h1>
+            <P>Visualize seu perfil agora mesmo</P>
+            <button type="submit" name="btn" id="btn" class="btn"><a onclick="window.location.href=('/perfil')" id="link-botão">Ir para perfil</a></button>
 
-                <div class="textfield">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" class="input" placeholder="poolclean@email.com" title="Máx. 50 caracteres" required>
-                    <span class="require">*Campo obrigatório</span>
-                </div>
-
-                <div class="textfield">
-                    <label for="password">Senha:</label>
-                    <input type="password" name="senha" id="senha" class="input" placeholder="Senha" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%¨&*-]).{8,}$" title="8 à 50 caracteres com números, maiúsculas, minúsculas e especiais (!@#$%&*)" required>
-                    <span class="require">*Campo obrigatório</span>
-                </div>
-
-                <div class="textfield">
-                    <label for="password">Confirmar Senha:</label>
-                    <input type="password" name="senha2" id="senha2" class="input" placeholder="Confirmar Senha" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%¨&*-]).{8,}$" required>
-                    <span class="require">*Campo obrigatório</span>
-                </div>
-
-                <button type="submit" name="btn" id="btn" class="btn">Cadastre-se</button>
-            </form>
         </div>
     </div>
 </div>

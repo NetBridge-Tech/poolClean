@@ -145,7 +145,7 @@ form{
     margin-bottom: 10px;
 }
 
-.textfield > input::placeholder, #email, #password{
+.textfield > input::placeholder, #email, #senha{
     color: #14131580;
 }
 

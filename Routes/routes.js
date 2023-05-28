@@ -3,7 +3,7 @@ const routes = express.Router();
 const path = require('path');
 const Pessoa = require('../Pessoa')
 const bcrypt = require('bcryptjs');
-
+const autenticarUsuario = require('../autenticarUsuario')
 
 routes.get('/', (req, res) => {
     res.render('../views/home', {
@@ -36,8 +36,8 @@ routes.get('/cadastro', (req, res) => {
 
 
 routes.post('/add-pessoa', async (req, res) => {
-    if(req.body.password == req.body.password2){
-        const hashedPassword = await bcrypt.hash(req.body.password, 10)
+    if(req.body.senha == req.body.senha2){
+        const hashedPassword = await bcrypt.hash(req.body.senha, 10)
         Pessoa.create({
             nome: req.body.nome,
             email: req.body.email,
@@ -66,27 +66,24 @@ routes.get('/login', (req, res) => {
 });
 
 
-routes.post('/login', async (req, res) => {
-    const { nome, password } = req.body;
-    try {
-      const result = await db.query(
-        "SELECT * FROM pessoas WHERE nome = $1",
-        [nome]
-      );
-      if (result.rows.length === 0) {
-        return res.status(401).send("Usuário não encontrado");
-      }
-      const user = result.rows[0];
-      if (user.password !== password) {
-        return res.status(401).send("Senha incorreta");
-      }
-      req.session.user = user;
-      res.redirect("/perfil");
-    } catch (err) {
-      console.log(err);
-      res.status(500).send("Ocorreu um erro");
-    }
+routes.post('/login', (req, res) => {
+    const email = req.body.email;
+    const senhaInserida = req.body.senha;
+  
+    autenticarUsuario(email, senhaInserida)
+      .then((autenticado) => {
+        if (autenticado) {
+          res.redirect("/perfil") // Renderiza a página de sucesso
+        } else {
+          res.send('Credenciais inválidas!'); // Renderiza a página de erro
+        }
+      })
+      .catch((error) => {
+        res.status(500).send('Erro no servidor'); // Renderiza uma página de erro genérica
+      });
   });
+
+
 
 routes.get('/perfil', (req, res) => {
     Pessoa.findAll({
