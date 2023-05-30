@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 .main-login{
-    width: 99vw;
     height: 140vh;
     background-color: var(--main-bg-light);
     display: flex;
@@ -10,7 +9,6 @@
     transition: background 0.2s linear;
 }
 
-/* DARK THEME >>
 .light{
     background-color: #efefef;
 }

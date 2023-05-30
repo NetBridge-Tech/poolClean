@@ -10,7 +10,6 @@ routes.get('/', (req, res) => {
     res.render('../views/home', {
         title: 'Pool Clean',
         style: 'home.css',
-        // function: 'toggleSidebar()'
     })
 });
 

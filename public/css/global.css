@@ -35,6 +35,10 @@
     font-family: var(--fonte-padrao);
 }
 
+body{
+    width: 100%;
+}
+
 /*Navbar*/
 
 .logo{
