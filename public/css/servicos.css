@@ -29,7 +29,7 @@
 .servicoPrincipal{
     background-color: var(--primary-color);
     width: 90%;
-    height: 15vh;
+    height: 17vh;
     margin: 12em auto 0 auto;
     border-radius: 6px;
     color: white;
@@ -40,7 +40,7 @@
 .servico{
     background-color: var(--primary-color);
     width: 90%;
-    height: 15vh;
+    height: 17vh;
     margin: 2em auto 0 auto;
     border-radius: 6px;
     
@@ -52,4 +52,18 @@
     font-size: 1.3em;
     font-family: var(--fonte-padrao);
     padding-top: 1em;
+}
+
+button.button{
+    width: 10vw;
+    height: 5vh;
+    background-color: var(--analoga);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: .7em;
+}
+
+.button:hover{
+    background-color: #fb8536;
 }
